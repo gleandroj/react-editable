@@ -1,5 +1,9 @@
 import React from "react";
 
+
+@Editable({
+  editable: EditableApp
+})
 class Post extends React.Component {
   constructor(props) {
     super(props);

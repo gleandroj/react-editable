@@ -19,5 +19,19 @@ export default {
            content: '<p>' + response.data.body + '</p>'
          };
       })
+  },
+  requestAllPost: function(id) {
+    return axios.get(`https://jsonplaceholder.typicode.com/posts`)
+      .then(response => {
+        let posts = response.data.map((post, i) => {
+          return {
+           title: post.title,
+           image: "http://lorempixel.com/c/880/200/technics/",
+           content: '<p>' + post.body + '</p>'
+         };
+        });
+
+        return posts;
+      });
   }
 }
