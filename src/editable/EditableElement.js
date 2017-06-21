@@ -15,7 +15,7 @@ export default class EditableElement extends React.Component{
   }
 
   onCancelarClick(e){
-      //e.preventDefault();
+      e.preventDefault();
       this.instanceProps = Object.assign({}, this.instanceOriginalProps); 
       this.editable.resetState();
       this.setState({
@@ -24,7 +24,7 @@ export default class EditableElement extends React.Component{
   }
 
   onEditarClick(e){
-    //e.preventDefault();
+    e.preventDefault();
     this.instanceOriginalProps = Object.assign({}, this.instanceProps); 
     this.editable.originalState = Object.assign({}, this.editable.state); 
     this.setState((preState)=>{
